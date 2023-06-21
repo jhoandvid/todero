@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Términos y Condiciones</title>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    
+    <form action="procesar_formulario.php" method="POST">
+        <!-- Campos del formulario -->
+        
+        <!-- Otros campos del formulario -->
+        
+        <div>
+            <input type="checkbox" id="aceptarTerminos" name="aceptarTerminos">
+            <label for="aceptarTerminos">Acepto los términos y condiciones</label>
+        </div>
+        
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <script>
+        // Validación del formulario antes de enviarlo
+        const form = document.querySelector('form');
+        const checkbox = document.querySelector('#aceptarTerminos');
+        
+        form.addEventListener('submit', function(event) {
+            if (!checkbox.checked) {
+                event.preventDefault(); // Evita que el formulario se envíe si no se aceptan los términos
+                alert('Debes aceptar los términos y condiciones');
+            }
+        });
+    </script>
+</body>
+</html>
