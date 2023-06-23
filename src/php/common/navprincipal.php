@@ -19,16 +19,17 @@
             background-color: #F29F05;
             display: flex;
             align-items: center;
-            padding: 15px;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 999999;
+            height: 109px
         }
 
         .navbar-logo {
             width: 7cm;
+            padding-left: 10px;
         }
 
         .navbar-logo img {
